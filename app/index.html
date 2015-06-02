@@ -101,7 +101,11 @@
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section data-route="home">
+
+              <geo-location watchpos longitude latitude></geo-location>
               <a-conversations data={{conversationsdata}} loading={{convLoading}}></a-conversations>
+
+              <div class="splitview">
 
               <paper-menu class="list" on-iron-activate="_listTap">
                 <template if={{convLoading}} is="dom-repeat" items="{{conversationsdata}}" as="conv">
@@ -111,7 +115,7 @@
 
               <div class="content">detail</div>
 
-
+              </div>
               
               
               

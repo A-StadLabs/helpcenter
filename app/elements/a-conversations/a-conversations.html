@@ -44,7 +44,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       data: {
         type: Array,
-        value: {},
+        value:  {},
         notify: true
       },
 
@@ -81,8 +81,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     },
 
     handleResponse: function(e){
-      console.log("Response", this.ajaxResponse.data);
-      this.data = this.ajaxResponse.data;
+      console.log("Response", this.ajaxResponse);
+      this.data = this.ajaxResponse;
     }
   });
 })();

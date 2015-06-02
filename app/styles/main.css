@@ -16,3 +16,11 @@ body {
 .content {
 	@apply(--layout-flex-auto);
 }
+
+.list {
+	width: 200px;
+}
+
+.splitview {
+	@apply(--layout-vertical );
+}
