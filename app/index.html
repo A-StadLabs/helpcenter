@@ -101,10 +101,20 @@
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section data-route="home">
-              <a-conversations data={{conversationsdata}} api="http://astad.herokuapp.com/infofichecats"></a-conversations>
-              <template is="dom-repeat" items="{{conversationsdata}}" as="conv">
-                <div><span>{{conv.name}}</span></div>
-              </template>
+              <a-conversations data={{conversationsdata}} loading={{convLoading}}></a-conversations>
+
+              <paper-menu class="list" on-iron-activate="_listTap">
+                <template if={{convLoading}} is="dom-repeat" items="{{conversationsdata}}" as="conv">
+                <paper-item>{{conv.title}}</paper-item>
+                </template>
+              </paper-menu>
+
+              <div class="content">detail</div>
+
+
+              
+              
+              
             </section>
 
             <section data-route="users">
