@@ -21,8 +21,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 /* Application theme */
 
 :root {
-    --dark-primary-color: #303F9F;
-    --default-primary-color:#3F51B5;
+
+    --dark-primary-color: #9F3092;
+    --default-primary-color:#9F3092;
     --light-primary-color: #C5CAE9;
     --text-primary-color: #ffffff; /*text/icons*/
     --accent-color: #FF4081;
@@ -45,6 +46,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 }
 
 /* General styles */
+
+.paper-font-display4,
+.paper-font-display3,
+.paper-font-display2,
+.paper-font-display1,
+.paper-font-headline,
+.paper-font-title,
+.paper-font-subhead,
+.paper-font-body2,
+.paper-font-body1,
+.paper-font-caption,
+.paper-font-menu,
+.paper-font-button,
+.paper-font-code2,
+.paper-font-code1 {
+  font-family: 'Courier';
+}
+
 
 paper-material {
   border-radius: 2px;
@@ -76,6 +95,8 @@ paper-menu iron-icon {
 }
 
 paper-menu a {
+      font-family: 'Open Sans', sans-serif;
+
   text-decoration: none;
   color: var(--menu-link-color);
   display: -ms-flexbox;
@@ -87,7 +108,6 @@ paper-menu a {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-size: 14px;
