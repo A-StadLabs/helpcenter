@@ -18,10 +18,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   </style>
   <template>
-    <div>Hello from <span>{{foo}}</span></div>
     <iron-ajax
     auto
-    url="http://astad.herokuapp.com/homefeed"
+    url="{{api}}"
     params=''
     handle-as="json"
     on-response="handleResponse"
@@ -35,6 +34,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     is: 'a-conversations',
 
     properties: {
+
+      api: {
+        type: String,
+        value: 'http://astad.herokuapp.com/homefeed',
+        notify: true
+      },
 
       data: {
         type: Array,
@@ -75,7 +80,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     },
 
     handleResponse: function(e){
-      console.log("Response", e, this.ajaxResponse.data);
+      console.log("Response", this.ajaxResponse.data);
       this.data = this.ajaxResponse.data;
     }
   });

@@ -101,9 +101,9 @@
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section data-route="home">
-              <a-conversations data={{conversationsdata}}></a-conversations>
-              <template is="dom-repeat" items="{{conversationsdata}}">
-                <div><span>aa {{item.title}}</span></div>
+              <a-conversations data={{conversationsdata}} api="http://astad.herokuapp.com/infofichecats"></a-conversations>
+              <template is="dom-repeat" items="{{conversationsdata}}" as="conv">
+                <div><span>{{conv.name}}</span></div>
               </template>
             </section>
 
