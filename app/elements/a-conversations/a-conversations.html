@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 
 <dom-module id="a-conversations">
   <style>
@@ -18,6 +19,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
   <template>
     <div>Hello from <span>{{foo}}</span></div>
+    <iron-ajax
+    auto
+    url="http://astad.herokuapp.com/homefeed"
+    params=''
+    handle-as="json"
+    on-response="handleResponse"
+    debounce-duration="300"
+    last-response="{{ajaxResponse}}"></iron-ajax>
   </template>
 </dom-module>
 <script>
@@ -26,36 +35,48 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     is: 'a-conversations',
 
     properties: {
+
       data: {
         type: Array,
-        value: 'bar',
+        value: {},
         notify: true
       },
+
       keys: {
         type: Array,
         value: 'bar',
         notify: true
       },
+
       limitFrom: {
         type: Number,
         value: 'bar',
         notify: true
       },
+
       limitTo: {
         type: Number,
         value: 'bar',
         notify: true
       },
+
       neighbourhood: {
         type: String,
         value: 'bar',
         notify: true
       },
+
       dataReady: {
         type: Boolean,
         value: false,
         notify: true
       }
+
+    },
+
+    handleResponse: function(e){
+      console.log("Response", e, this.ajaxResponse.data);
+      this.data = this.ajaxResponse.data;
     }
   });
 })();

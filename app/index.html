@@ -101,7 +101,10 @@
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section data-route="home">
-              <a-conversations foo="a-conversations"></a-conversations>
+              <a-conversations data={{conversationsdata}}></a-conversations>
+              <template is="dom-repeat" items="{{conversationsdata}}">
+                <div><span>aa {{item.title}}</span></div>
+              </template>
             </section>
 
             <section data-route="users">
