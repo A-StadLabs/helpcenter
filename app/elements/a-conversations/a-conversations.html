@@ -37,7 +37,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       api: {
         type: String,
-        value: 'http://3422cd48.ngrok.com/conversations',
+        value: 'https://astad-api.herokuapp.com/conversations/',
         //value: 'http://astad.herokuapp.com/homefeed',
         notify: true
       },
@@ -80,8 +80,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     },
 
-    handleResponse: function(e){
-      console.log("Response", this.ajaxResponse);
+    handleResponse: function(){
+      console.log('Response', this.ajaxResponse);
       this.data = this.ajaxResponse;
     }
   });
