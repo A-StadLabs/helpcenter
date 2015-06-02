@@ -1,7 +1,7 @@
 ![](https://cloud.githubusercontent.com/assets/110953/7877439/6a69d03e-0590-11e5-9fac-c614246606de.png) 
-## Polymer Starter Kit
+## Helpcenter 2.0 (Polymer 1.0)
 
-> A starting point for building web applications with Polymer 1.0
+> Prototype for antwerpen.be Helpcenter 2.0
 
 ### Included out of the box:
 
@@ -11,19 +11,6 @@
 * Unit testing with Web Component Tester
 * Offline-first setup through Service Worker elements
 * End-to-end Build Tooling (including [Vulcanize](https://github.com/Polymer/vulcanize))
-
-## Getting Started
-
-To take advantage of Polymer Starter Kit you need to:
-
-1. Get a copy of the code.
-2. Install the dependencies if you don't already have them.
-3. Modify the application to your liking.
-4. Deploy your production code.
-
-## Getting the code
-
-[Download](https://github.com/polymerelements/polymer-starter-kit/releases/latest) and extract Polymer Starter Kit to where you want to work.
 
 ### Install dependencies
 
@@ -59,10 +46,6 @@ $ gulp
 ```
 
 Build and optimize the current project, ready for deployment. This includes linting as well as vulcanization, image, script, stylesheet and HTML optimization and minification.
-
-## Application Theming
-
-Polymer 1.0 introduces a shim for CSS custom properties. We take advantage of this in `app/elements/app-theme.html` to provide theming for your application. You can also find our presets for Material Design breakpoints in this file.
 
 ## Unit Testing
 
