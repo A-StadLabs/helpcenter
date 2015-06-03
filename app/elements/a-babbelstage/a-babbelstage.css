@@ -46,3 +46,13 @@ paper-toolbar {
 .content {
   height: 3000px;
 }
+
+paper-fab {
+      display: block;
+      margin-bottom:24px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    paper-fab.blue {
+      --paper-fab-background: var(--paper-light-blue-500);
+    }

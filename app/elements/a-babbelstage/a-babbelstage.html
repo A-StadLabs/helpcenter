@@ -37,17 +37,22 @@ Left Nav + List + Detail
         <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}">
               <a data-route="home" href="/">
                 <iron-icon icon="home"></iron-icon>
-                <span>Home</span>
+                <span>Bookmarks / Landmarks</span>
               </a>
 
               <a data-route="users" href="/users">
                 <iron-icon icon="info"></iron-icon>
-                <span>Users</span>
+                <span>Settings</span>
               </a>
 
               <a data-route="contact" href="/contact">
                 <iron-icon icon="mail"></iron-icon>
-                <span>Contact</span>
+                <span>Map View</span>
+              </a>
+
+              <a data-route="contact" href="/contact">
+                <iron-icon icon="mail"></iron-icon>
+                <span>Add device</span>
               </a>
 
               <p>App from Antwerp</p>
@@ -85,10 +90,12 @@ Left Nav + List + Detail
           <div class="content">
             
             Hier moet dus routing komen zodat we ineens naar de juiste conversatie kunnen gaan 
+            <a-message type="parent"></a-message>
+            <!-- <template repeater> -->
+            <a-message type="child"></a-message> 
+            <!-- end repeater -->
 
-            <div>hier dus de eerste message (parent)</div>
-
-            <div> en daaronder de children repeat</div>
+            <paper-fab icon="add" title="create" tabindex="0"></paper-fab>
 
           </div>
 
