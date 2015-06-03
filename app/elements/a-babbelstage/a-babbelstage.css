@@ -7,20 +7,42 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-body {
-    background: #fafafa;
-    font-family: 'Open Sans', sans-serif;
-    color: #6BB078;
+:host {
+  display: block;
 }
 
-.content {
-	@apply(--layout-flex-auto);
+.nav {
+  border-right: 1px solid #ccc;
+}
+
+.list-panel {
+  background-color: #fafafa;
+}
+
+.list-panel {
+  --paper-header-panel-standard-container: {
+    border-right: 1px solid #ccc;
+  };
+}
+
+paper-toolbar {
+  background-color: #42A5F5;
 }
 
 .list {
-	
+  padding: 0;
 }
 
-.splitview {
-	@apply(--layout-vertical );
+.list paper-item {
+  height: 80px;
+  border-bottom: 1px solid #dedede;
+  background-color: #fafafa;
+}
+
+.main-drawer-panel:not([narrow]) [list-toggle] {
+  display: none;
+}
+
+.content {
+  height: 3000px;
 }
